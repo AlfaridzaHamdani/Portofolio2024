@@ -1,0 +1,206 @@
+$white: #f0f0f0;
+$black: #3d3b3c;
+$blue: #0065a9;
+$popins: "Poppins", sans-serif;
+$jost: "Jost", sans-serif;
+
+.page {
+  z-index: 5;
+  font-family: $jost;
+  color: $black;
+  padding: 50px 300px;
+
+  .aboutMe {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 60%;
+
+      a {
+        align-self: self-start;
+      }
+
+      p {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 300;
+        color: $black;
+        text-align: start;
+      }
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  h1:nth-of-type(1) {
+    font-size: 75px;
+    text-align: start;
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 400px;
+
+    .card {
+      height: calc(100% - 100px);
+      width: 100%;
+
+      h4,
+      h2 {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .page {
+    padding: 40px 150px;
+
+    .aboutMe {
+      padding: 80px 0;
+
+      .container {
+        width: 65%;
+      }
+    }
+
+    h1:nth-of-type(1) {
+      font-size: 60px;
+    }
+
+    .container {
+      gap: 40px;
+      height: 350px;
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .page {
+    padding: 30px 100px;
+
+    .aboutMe {
+      flex-direction: row;
+      padding: 60px 0;
+      gap: 30px;
+
+      .container {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    h1:nth-of-type(1) {
+      font-size: 50px;
+    }
+
+    .container {
+      flex-direction: column;
+      gap: 30px;
+      height: auto;
+
+      .card {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .page {
+    padding: 20px 50px;
+
+    .aboutMe {
+      flex-direction: column;
+      padding: 40px 0;
+
+      img {
+        width: 100%;
+      }
+
+      .container {
+        width: 100%;
+        margin: 20px 0;
+      }
+    }
+
+    h1:nth-of-type(1) {
+      font-size: 40px;
+    }
+
+    .container {
+      flex-direction: column;
+      gap: 20px;
+      height: auto;
+
+      .card {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .page {
+    padding: 10px 20px;
+
+    .aboutMe {
+      flex-direction: column;
+      padding: 50px 0;
+
+      img {
+        width: 100%;
+      }
+
+      .container {
+        gap: 10px;
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .container {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    h1:nth-of-type(1) {
+      font-size: 30px;
+    }
+
+    h1 {
+      text-align: start;
+    }
+
+    .container {
+      flex-direction: column;
+      gap: 10px;
+      height: auto;
+
+      .card {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

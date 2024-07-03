@@ -9,12 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "framer-motion": "^11.0.10",
+    "gsap": "^3.12.5",
+    "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.4"
+    "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/node": "20.14.9",
+    "@types/react": "18.3.3",
     "eslint": "^8",
-    "eslint-config-next": "14.2.4"
+    "eslint-config-next": "14.2.4",
+    "sass": "^1.77.6"
   }
 }

@@ -1,0 +1,36 @@
+$white: #f0f0f0;
+$black: #3d3b3c;
+$blue: #0065a9;
+$popins: "Poppins", sans-serif;
+$jost: "Jost", sans-serif;
+$page-padding: 0 100px;
+
+.sliderContainer {
+  top: 0;
+  position: absolute;
+  top: calc(100% - 165px);
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  white-space: nowrap;
+}
+
+.slider p {
+  position: relative;
+  margin: 0px;
+  font-size: 230px;
+  font-weight: 500;
+  padding-right: 50px;
+  line-height: 165px;
+  text-transform: uppercase;
+  font-family: $jost;
+  font-weight: 400;
+}
+
+.slider p:nth-of-type(2) {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}

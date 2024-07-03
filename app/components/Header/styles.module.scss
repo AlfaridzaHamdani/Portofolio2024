@@ -1,0 +1,37 @@
+$white: #f0f0f0;
+$black: #3d3b3c;
+$blue: #0065a9;
+
+.header {
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  z-index: 10;
+  .menu {
+    position: relative;
+    width: 480px;
+    height: 650px;
+    background-color: $black;
+    border-radius: 25px;
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+}
+
+@media all and (max-width: 480px) {
+  .header {
+    right: 30px;
+    top: 30px;
+    .menu {
+      width: 90vw;
+      height: 90vh;
+    }
+  }
+}

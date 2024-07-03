@@ -1,0 +1,67 @@
+$white: #f0f0f0;
+$black: #3d3b3c;
+$blue: #0065a9;
+
+.button {
+  width: 100px;
+  height: 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  .slider {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    .el {
+      height: 100%;
+      width: 100%;
+      background-color: $black;
+      color: $white;
+      text-transform: uppercase;
+      font-family: "Jost", sans-serif;
+      &:nth-of-type(2) {
+        position: absolute;
+        top: 100%;
+        background-color: $white;
+        color: $black;
+      }
+      &:hover {
+        .perspectiveText {
+          transform: rotateX(90deg);
+          p {
+            &:nth-of-type(1) {
+              transform: translateY(-100%);
+              opacity: 0;
+            }
+            &:nth-of-type(2) {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .perspectiveText {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+    transform-style: preserve-3d;
+    p {
+      transition: all 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+
+      &:nth-of-type(2) {
+        position: absolute;
+        transform: rotateX(-90deg) translateY(9px);
+        transform-origin: bottom center;
+        opacity: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+$white: #f0f0f0;
+$black: #3d3b3c;
+$blue: #0065a9;
+$popins: "Poppins", sans-serif;
+$jost: "Jost", sans-serif;
+
+.main {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $white;
+  z-index: 1;
+  .mask,
+  .body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    cursor: default;
+
+    div:nth-child(1) {
+      height: 100%;
+      left: 0;
+    }
+
+    div:nth-child(2) {
+      height: 100%;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  .mask {
+    mask-image: url("../../public/mask.svg");
+    mask-repeat: no-repeat;
+    background: $black;
+    position: absolute;
+    color: $white;
+    z-index: 10;
+  }
+}

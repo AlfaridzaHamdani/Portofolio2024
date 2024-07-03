@@ -1,0 +1,60 @@
+$white: #f0f0f0;
+$black: #3d3b3c;
+$blue: #0065a9;
+$jost: "Jost", sans-serif;
+
+.button {
+  font-family: $jost;
+  color: $black;
+  border: $black 1px solid;
+  border-radius: 70px;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: fit-content;
+    padding: 30px 70px;
+
+    h1 {
+      margin: 0;
+      font-family: $jost;
+      font-weight: 400;
+    }
+
+    div:nth-of-type(1) {
+      position: absolute;
+      overflow: hidden;
+    }
+
+    div:nth-of-type(2) {
+      overflow: hidden;
+    }
+  }
+
+  .textContainer:nth-of-type(2) {
+    position: absolute;
+    background-color: yellowgreen;
+  }
+
+  span {
+    color: $black;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  // &:hover {
+  //   background-color: $black;
+
+  //   span {
+  //     color: $white;
+  //   }
+  // }
+}

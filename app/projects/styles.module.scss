@@ -1,0 +1,89 @@
+$white: #f0f0f0;
+$black: #3d3b3c;
+$blue: #0065a9;
+$popins: "Poppins", sans-serif;
+$jost: "Jost", sans-serif;
+$page-padding: 0 100px;
+
+.heading {
+  font-family: $jost;
+  padding: 30px 300px;
+
+  h1 {
+    font-weight: 400;
+    font-size: 75px;
+  }
+}
+
+.main {
+  font-family: $jost;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.body {
+  width: 100%;
+  padding: 0 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .heading {
+    padding: 20px 200px;
+
+    h1 {
+      font-size: 60px;
+    }
+  }
+
+  .body {
+    padding: 0 200px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .heading {
+    padding: 15px 100px;
+
+    h1 {
+      font-size: 50px;
+    }
+  }
+
+  .body {
+    padding: 0 100px;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .heading {
+    padding: 10px 50px;
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .body {
+    padding: 0 50px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .heading {
+    padding: 10px 20px;
+
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  .body {
+    padding: 0 20px;
+  }
+}
