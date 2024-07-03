@@ -86,7 +86,7 @@ export default function Index({ modal, projects }) {
                 key={`modal_${index}`}
               >
                 <Image
-                  src={`/images/${src}`}
+                  src={`./images/${src}`}
                   style={{ width: "auto", height: "auto" }}
                   width={300}
                   height={0}
