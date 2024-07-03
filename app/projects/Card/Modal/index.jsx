@@ -92,7 +92,7 @@ export default function Index({ modal, projects }) {
                   height={0}
                   alt="image"
                   placeholder="blur"
-                  blurDataURL={`/images/${src}`}
+                  blurDataURL={`./images/${src}`}
                 />
               </div>
             );
