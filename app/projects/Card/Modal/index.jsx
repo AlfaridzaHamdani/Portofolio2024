@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import gsap from "gsap";
-import Link from "next/link";
 
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
@@ -22,7 +21,7 @@ const scaleAnimation = {
   },
 };
 
-export default function index({ modal, projects }) {
+export default function Index({ modal, projects }) {
   const { active, index } = modal;
   const modalContainer = useRef(null);
   const cursor = useRef(null);

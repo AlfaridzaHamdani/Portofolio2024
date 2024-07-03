@@ -8,15 +8,27 @@ const Projects = () => {
     <div className={style.projects}>
       <h1 className={style.title}>Recent Projects</h1>
       <ProjectCard
-        position="top"
-        projectName="Seku"
-        projectCategory="Web Design & Development"
-        projectDescription="Seku adalah website yang memberikan penggunanya inspirasi untuk bla bla bla"
+        title={"Seku"}
+        desc={"Seku is a web App"}
+        cat={"Design & Development"}
+        type={"top"}
+        url={"https://alfaridzahamdani.github.io/Seku/"}
       />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
+      <ProjectCard
+        title={"Harvest Table"}
+        desc={""}
+        cat={"Development"}
+        type={""}
+        url={"https://alfaridzahamdani.github.io/Seku/"}
+      />
+      <ProjectCard title={"Flowy"} desc={""} cat={"Development"} type={""} />
+      <ProjectCard
+        title={"Kucing Cari Rumah"}
+        desc={""}
+        cat={"Design & Development"}
+        type={""}
+        url={"https://alfaridzahamdani.github.io/Seku/"}
+      />
       <Button text="More Projects" linkTo="/projects" />
     </div>
   );

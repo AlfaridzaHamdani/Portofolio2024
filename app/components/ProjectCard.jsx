@@ -5,61 +5,38 @@ import arrow from "../assets/images/Arrow.svg";
 import Image from "next/image";
 import { useInView } from "framer-motion";
 
-const ProjectCard = (props) => {
+const ProjectCard = ({ title, desc, cat, type, url }) => {
   const container = React.useRef(null);
   const isInView = useInView(container, { once: true });
-  const [projectName, setProjectName] = useState("Project Name Here");
-  const [projectCategory, setProjectCategory] = useState(
-    "Project Category Here"
-  );
-  const [projectDescription, setProjectDescription] = useState(
-    "Project Description Here"
-  );
-
-  const [stylingCard, setStylingCard] = useState("");
-
-  useEffect(() => {
-    if (props.projectName) {
-      setProjectName(props.projectName);
-    }
-    if (props.projectCategory) {
-      setProjectCategory(props.projectCategory);
-    }
-    if (props.projectDescription) {
-      setProjectDescription(props.projectDescription);
-    }
-
-    if (props.position === "top") {
-      setStylingCard(style.projectCardTop);
-    } else {
-      setStylingCard(style.projectCard);
-    }
-  }, [props.position]);
 
   return (
-    <div className={stylingCard} ref={container}>
+    <div
+      className={type == "top" ? style.projectCardTop : style.projectCard}
+      ref={container}
+      onClick={() => window.open(url, "_blank")}
+    >
       <div className={style.container}>
         <div className={style.wrapper}>
           <div className={style.textContainer}>
             <h1
               style={{
                 transform: isInView ? "translateY(0)" : "translateY(100px)",
-                transition: "all 0.5s ease-in-out",
-                transitionDelay: 0.5,
+                transition: "transform 0.5s ease-in-out",
+                transitionDelay: "0.5s",
               }}
             >
-              {projectName}
+              {title}
             </h1>
           </div>
           <div className={style.textContainer}>
             <h2
               style={{
                 transform: isInView ? "translateY(0)" : "translateY(100px)",
-                transition: "all 0.5s ease-in-out",
-                transitionDelay: 0.5,
+                transition: "transform 0.5s ease-in-out",
+                transitionDelay: "0.5s",
               }}
             >
-              {projectCategory}
+              {cat}
             </h2>
           </div>
         </div>
@@ -67,15 +44,14 @@ const ProjectCard = (props) => {
           <p
             style={{
               transform: isInView ? "translateY(0)" : "translateY(100px)",
-              transition: "all 0.5s ease-in-out",
-              transitionDelay: 0.5,
+              transition: "transform 0.5s ease-in-out",
+              transitionDelay: "0.5s",
             }}
           >
-            {projectDescription}
+            {desc}
           </p>
         </div>
-
-        <Image src={arrow} alt="Arrow" priority={true} />
+        <Image src={arrow} alt="Arrow icon" priority={true} />
       </div>
     </div>
   );
