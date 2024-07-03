@@ -10,7 +10,12 @@ const AboutPage = () => {
         <h1>About</h1>
 
         <div className={styles.aboutMe}>
-          <Image src="/images/Alfaridza.jpg" width={300} height={450} />
+          <Image
+            src="/images/Alfaridza.jpg"
+            width={300}
+            height={450}
+            alt="Image"
+          />
 
           <div className={styles.container}>
             <p>
