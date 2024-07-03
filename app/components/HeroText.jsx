@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import style from "../styles/heroText.module.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -8,10 +8,10 @@ const HeroText = () => {
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
-  let xPercent = 0;
-  let direction = -1;
+  const [xPercent, setXPercent] = useState(0);
+  const [direction, setDirection] = useState(-1);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!slider.current || !firstText.current || !secondText.current) return;
 
     gsap.registerPlugin(ScrollTrigger);
@@ -21,25 +21,35 @@ const HeroText = () => {
         scrub: 0.25,
         start: 0,
         end: window.innerHeight,
-        onUpdate: (e) => (direction = e.direction * -1),
+        onUpdate: (e) => setDirection(e.direction * -1),
       },
       x: "-500px",
     });
-    requestAnimationFrame(animate);
+
+    animate();
+
+    return () => {
+      // Clean up animation if needed
+      cancelAnimationFrame(animate);
+    };
   }, []);
 
   const animate = () => {
-    if (xPercent < -100) {
-      xPercent = 0;
-    } else if (xPercent > 0) {
-      xPercent = -100;
+    let newXPercent = xPercent + 0.1 * direction;
+    if (newXPercent < -100) {
+      newXPercent = 0;
+    } else if (newXPercent > 0) {
+      newXPercent = -100;
     }
+
+    setXPercent(newXPercent);
+
     if (firstText.current && secondText.current) {
-      gsap.set(firstText.current, { xPercent: xPercent });
-      gsap.set(secondText.current, { xPercent: xPercent });
+      gsap.set(firstText.current, { xPercent: newXPercent });
+      gsap.set(secondText.current, { xPercent: newXPercent });
     }
+
     requestAnimationFrame(animate);
-    xPercent += 0.1 * direction;
   };
 
   return (
