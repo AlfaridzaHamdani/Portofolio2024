@@ -83,30 +83,25 @@ const Template = ({ children }) => {
     };
 
     return (
-      <AnimatePresence>
-        <motion.svg
-          className={styles.svg}
-          variants={variants}
-          initial="initial"
-          animate="enter"
-          exit="exit"
-        >
-          <motion.path
-            {...anim(curve(initialPath, targetPath))}
-            fill="#3d3b3c"
-          />
-        </motion.svg>
-      </AnimatePresence>
+      <motion.svg
+        className={styles.svg}
+        variants={variants}
+        initial="initial"
+        animate="enter"
+        exit="exit"
+      >
+        <motion.path {...anim(curve(initialPath, targetPath))} fill="#3d3b3c" />
+      </motion.svg>
     );
   };
 
   return (
     <div className={styles.page}>
-      <div
+      {/* <div
         style={{ opacity: dimensions == null ? 1 : 0 }}
         className={styles.background}
       />
-      {dimensions.width > 0 && <Svg {...dimensions} />}
+      {dimensions.width > 0 && <Svg {...dimensions} />} */}
       {children}
     </div>
   );
