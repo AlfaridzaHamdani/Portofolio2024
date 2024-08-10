@@ -3,17 +3,25 @@ import styles from "./styles.module.scss";
 import { useEffect, useState } from "react";
 import { ProjectsData } from "../data";
 
-const page = ({ params }) => {
+const page = () => {
+  const [projectId, setProjectId] = useState(null);
   const projects = ProjectsData;
-  const id = params.projectId;
   const [data, setData] = useState([]);
   const [features, setFeatures] = useState([]);
   const [openFeatureId, setOpenFeatureId] = useState(1);
   const [featuredImg, setFeaturedImg] = useState(null);
+  const [title, setTitle] = useState("No Title");
 
   const toggleDropdown = (featureId) => {
     setOpenFeatureId(openFeatureId === featureId ? null : featureId);
   };
+
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    const pathParts = url.pathname.split("/");
+    const id = pathParts[pathParts.length - 1];
+    setProjectId(id);
+  }, []);
 
   useEffect(() => {
     if (data?.features) {
@@ -25,13 +33,25 @@ const page = ({ params }) => {
   }, [openFeatureId, data]);
 
   useEffect(() => {
-    const data = projects.find((item) => item.id == id);
-    setData(data);
-    setFeatures(data.features);
-  }, [id]);
+    const foundData = projects.find((item) => item.id == projectId);
+    if (foundData) {
+      setData(foundData);
+      setFeatures(foundData.features || []);
+    } else {
+      setData(null);
+      setFeatures([]);
+    }
+  }, [projectId]);
 
-  const title = data.title ? data.title.toUpperCase() : "No Title";
+  useEffect(() => {
+    if (data) {
+      setTitle(data.title ? data.title.toUpperCase() : "No Title");
+    }
+  }, [data]);
 
+  if (!data) {
+    return <p>Loading...</p>;
+  }
   return (
     <>
       <div className={styles.studyCase}>
