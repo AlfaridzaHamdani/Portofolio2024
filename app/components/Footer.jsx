@@ -14,7 +14,6 @@ const Footer = () => {
 
       <div className={style.bottomFooter}>
         <div>
-          <h3>+62 8132 4448 289</h3>
           <h3>alfaridzah@gmail.com</h3>
         </div>
         <hr />

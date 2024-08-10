@@ -2,6 +2,15 @@ import React from "react";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import Button from "../components/Button";
+import { IoLogoJavascript } from "react-icons/io";
+import { MdHtml } from "react-icons/md";
+import { MdCss } from "react-icons/md";
+import { FaReact } from "react-icons/fa";
+import { RiNextjsLine } from "react-icons/ri";
+import { FaPhp } from "react-icons/fa";
+import { SiMysql } from "react-icons/si";
+import { FaFigma } from "react-icons/fa";
+import { FiFramer } from "react-icons/fi";
 
 const AboutPage = () => {
   return (
@@ -11,7 +20,7 @@ const AboutPage = () => {
 
         <div className={styles.aboutMe}>
           <Image
-            src="./images/Alfaridza.jpg"
+            src="/images/Alfaridza.jpg"
             width={300}
             height={450}
             alt="Image"
@@ -44,8 +53,8 @@ const AboutPage = () => {
             <hr />
             <h2>Design</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Reiciendis, voluptatibus?
+              I'ill design your website with the latest trends and technologies,
+              making it look modern and professional.
             </p>
           </div>
           <div className={styles.card}>
@@ -53,9 +62,23 @@ const AboutPage = () => {
             <hr />
             <h2>Development</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Reiciendis, voluptatibus?
+              If you have a design and need it to be developed, I can help you.
             </p>
+          </div>
+        </div>
+
+        <h1>My Skills</h1>
+        <div className={styles.skills}>
+          <div>
+            <MdHtml />
+            <MdCss />
+            <IoLogoJavascript />
+            <FaPhp />
+            <FaReact />
+            <RiNextjsLine />
+            <SiMysql />
+            <FaFigma />
+            <FiFramer />
           </div>
         </div>
       </div>

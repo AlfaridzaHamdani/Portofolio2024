@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 
 export default function index({ index, title, setModal, desc, url }) {
   const handleClick = () => {
-    window.open(url, "_blank");
+    window.open(url, "_self");
   };
 
   return (

@@ -20,7 +20,7 @@ export default function Home() {
           {projects.map((project, index) => {
             return (
               <Project
-                url={project.url}
+                url={`/projects/${project.id}`}
                 index={index}
                 title={project.title}
                 desc={project.desc}

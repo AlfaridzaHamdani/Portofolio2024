@@ -7,18 +7,18 @@ import Lenis from "@studio-freight/lenis";
 import useDimension from "./useDimension";
 
 const images = [
-  "./images/Flowy.png",
-  "./images/HarvestTable.png",
-  "./images/KucingCariRumah.png",
-  "./images/Portofolio.png",
-  "./images/Seku.png",
-  "./images/TechSprint.png",
-  "./images/Flowy.png",
-  "./images/HarvestTable.png",
-  "./images/KucingCariRumah.png",
-  "./images/Portofolio.png",
-  "./images/Seku.png",
-  "./images/TechSprint.png",
+  "/images/Flowy.png",
+  "/images/HarvestTable.png",
+  "/images/KucingCariRumah.png",
+  "/images/Portofolio.png",
+  "/images/Seku.png",
+  "/images/TechSprint.png",
+  "/images/NusantaraTrip.png",
+  "/images/Hoobank.png",
+  "/images/NusantaraCode.png",
+  "/images/Flowy.png",
+  "/images/HarvestTable.png",
+  "/images/KucingCariRumah.png",
 ];
 
 const ParalaxGallery = () => {
@@ -26,7 +26,7 @@ const ParalaxGallery = () => {
   const { height } = useDimension();
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start end", "end start"], // start when the container starts, end when the container ends
+    offset: ["start end", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], [0, height * 2]);

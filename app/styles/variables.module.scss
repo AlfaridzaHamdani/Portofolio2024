@@ -21,6 +21,12 @@ $page-padding: 0 100px;
   }
 }
 
+.tech {
+  svg {
+    margin-right: 10px;
+  }
+}
+
 .about {
   padding-top: calc(100vh + 100px);
   width: calc(100% - 200px);

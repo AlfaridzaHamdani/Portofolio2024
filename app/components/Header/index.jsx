@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "./Button/index";
 import styles from "./styles.module.scss";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Nav from "./Nav";
 
 const Index = () => {
@@ -31,7 +31,7 @@ const Index = () => {
       setIsSmallScreen(window.innerWidth <= 481);
     };
 
-    handleResize(); // Set initial value
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -39,24 +39,34 @@ const Index = () => {
     };
   }, []);
 
-  return (
-    <div className={styles.header}>
-      <motion.div
-        className={styles.menu}
-        variants={variants}
-        custom={isSmallScreen}
-        animate={isActive ? "open" : "closed"}
-        initial="closed"
-        onClick={() => {
-          setIsActive(!isActive);
-        }}
-      >
-        {isActive && <Nav />}
-      </motion.div>
+  return Component();
 
-      <Button isActive={isActive} setIsActive={setIsActive} />
-    </div>
-  );
+  function Component() {
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => {
+      setMounted(true);
+    }, []);
+
+    if (mounted)
+      return (
+        <div className={styles.header}>
+          <motion.div
+            className={styles.menu}
+            variants={variants}
+            custom={isSmallScreen}
+            animate={isActive ? "open" : "closed"}
+            initial="closed"
+            onClick={() => {
+              setIsActive(!isActive);
+            }}
+          >
+            {isActive && <Nav />}
+          </motion.div>
+
+          <Button isActive={isActive} setIsActive={setIsActive} />
+        </div>
+      );
+  }
 };
 
 export default Index;

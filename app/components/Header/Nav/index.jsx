@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import { Links, FooterLinks } from "./data";
@@ -51,46 +50,44 @@ const index = () => {
   };
 
   return (
-    <AnimatePresence>
-      <div className={styles.nav}>
-        <div className={styles.body}>
-          {Links.map((link, i) => {
-            return (
-              <div key={i} className={styles.linkContainer}>
-                <motion.div
-                  custom={i}
-                  variants={perspective}
-                  initial="initial"
-                  animate="enter"
-                  exit="exit"
-                >
-                  <Link href={link.href}>{link.title}</Link>
-                </motion.div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className={styles.footer}>
-          {FooterLinks.map((link, i) => {
-            return (
-              <motion.a
-                target="_blank"
-                key={`f_${i}`}
-                href={link.href}
-                variants={slideIn}
+    <div className={styles.nav}>
+      <div className={styles.body}>
+        {Links.map((link, i) => {
+          return (
+            <div key={i} className={styles.linkContainer}>
+              <motion.div
                 custom={i}
+                variants={perspective}
+                initial="initial"
                 animate="enter"
                 exit="exit"
-                initial="initial"
               >
-                {link.title}
-              </motion.a>
-            );
-          })}
-        </div>
+                <Link href={link.href}>{link.title}</Link>
+              </motion.div>
+            </div>
+          );
+        })}
       </div>
-    </AnimatePresence>
+
+      <div className={styles.footer}>
+        {FooterLinks.map((link, i) => {
+          return (
+            <motion.a
+              target="_blank"
+              key={`f_${i}`}
+              href={link.href}
+              variants={slideIn}
+              custom={i}
+              animate="enter"
+              exit="exit"
+              initial="initial"
+            >
+              {link.title}
+            </motion.a>
+          );
+        })}
+      </div>
+    </div>
   );
 };
 
