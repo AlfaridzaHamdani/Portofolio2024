@@ -1,5 +1,3 @@
-// This file should be a server component where you handle static generation
-
 import { ProjectsData } from "../data";
 import StudyCaseHeader from "./StudyCaseHeader";
 import ImagePreview from "./ImagePreview";
