@@ -34,18 +34,29 @@ $page-padding: 0 100px;
     }
 
     .title {
-      flex-basis: 40%;
+      display: flex;
       height: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .containerTop {
+        display: flex;
+        flex-direction: column;
+
+        div:nth-child(1) {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .paragraph {
+        flex-basis: 70%;
+      }
 
       p {
         svg {
           margin-right: 10px;
         }
-      }
-
-      div:nth-child(1) {
-        display: flex;
-        align-items: center;
       }
 
       .bullet {
