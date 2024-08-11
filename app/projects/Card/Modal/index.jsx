@@ -86,13 +86,13 @@ export default function Index({ modal, projects }) {
                 key={`modal_${index}`}
               >
                 <Image
-                  src={`${modal}`}
+                  src={modal}
                   style={{ width: "auto", height: "auto" }}
                   width={300}
                   height={0}
                   alt="image"
                   placeholder="blur"
-                  blurDataURL={`${modal}`}
+                  blurDataURL={modal}
                 />
               </div>
             );

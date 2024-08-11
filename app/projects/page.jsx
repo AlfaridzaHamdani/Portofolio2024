@@ -6,6 +6,7 @@ import Modal from "./Card/Modal";
 import { ProjectsData } from "../components/data";
 
 const projects = ProjectsData;
+const repo = "Portofolio2024";
 
 export default function Home() {
   const [modal, setModal] = useState({ active: false, index: 0 });
@@ -20,7 +21,7 @@ export default function Home() {
           {projects.map((project, index) => {
             return (
               <Project
-                url={`/projects/${project.id}`}
+                url={`${repo}/projects/${project.id}`}
                 index={index}
                 title={project.title}
                 desc={project.desc}

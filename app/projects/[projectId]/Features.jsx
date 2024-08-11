@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./styles.module.scss";
 
 const Features = ({ features, defaultImg }) => {
-  const [openFeatureId, setOpenFeatureId] = useState(null);
+  const [openFeatureId, setOpenFeatureId] = useState(1);
   const [featuredImg, setFeaturedImg] = useState(null);
 
   const toggleDropdown = (featureId) => {
@@ -35,7 +35,6 @@ const Features = ({ features, defaultImg }) => {
               ></span>
             </button>
             {openFeatureId === item.id && <p>{item.desc}</p>}
-            {/* Ensure `item.id` and `features.length` are compared correctly */}
             {item.id !== features.length && <hr />}
           </div>
         ))}
