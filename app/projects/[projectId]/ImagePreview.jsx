@@ -5,7 +5,7 @@ const ImagePreview = ({ data }) => {
   return (
     <div className={styles.imagePreview}>
       <div className={styles.imgWrapper}>
-        <img src={`/images/${data.img}`} id="img" />
+        <img src={`./images/${data.img}`} id="img" />
         <div className={styles.darken}>
           {data.type ? (
             <a href={data.url} target="_blank" rel="Download Design">

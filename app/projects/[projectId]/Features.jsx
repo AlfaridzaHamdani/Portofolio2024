@@ -42,7 +42,9 @@ const Features = ({ features, defaultImg }) => {
       </div>
       <div className={styles.featureImg}>
         <img
-          src={featuredImg ? `/images/${featuredImg}` : `/images/${defaultImg}`}
+          src={
+            featuredImg ? `./images/${featuredImg}` : `./images/${defaultImg}`
+          }
           alt="Feature image"
         />
       </div>
