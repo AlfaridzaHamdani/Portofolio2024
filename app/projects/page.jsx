@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import { useState } from "react";
 import Project from "./Card";
 import Modal from "./Card/Modal";
-import { ProjectsData } from "./data";
+import { ProjectsData } from "../components/data";
 
 const projects = ProjectsData;
 

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./styles.module.scss";
+import prefix from "../../components/Prefix";
 
 const Features = ({ features, defaultImg }) => {
   const [openFeatureId, setOpenFeatureId] = useState(null);
@@ -42,9 +43,7 @@ const Features = ({ features, defaultImg }) => {
       </div>
       <div className={styles.featureImg}>
         <img
-          src={
-            featuredImg ? `./images/${featuredImg}` : `./images/${defaultImg}`
-          }
+          src={featuredImg ? `/images/${featuredImg}` : `/images/${defaultImg}`}
           alt="Feature image"
         />
       </div>

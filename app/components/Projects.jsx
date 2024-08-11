@@ -2,7 +2,7 @@ import React from "react";
 import style from "../styles/variables.module.scss";
 import ProjectCard from "./ProjectCard";
 import Button from "./Button";
-import { ProjectsData } from "../projects/data";
+import { ProjectsData } from "./data";
 
 const Projects = () => {
   const ProjectsList = ProjectsData.slice(0, 5);

@@ -1,4 +1,4 @@
-import { ProjectsData } from "../data";
+import { ProjectsData } from "../../components/data";
 import StudyCaseHeader from "./StudyCaseHeader";
 import ImagePreview from "./ImagePreview";
 import Features from "./Features";
