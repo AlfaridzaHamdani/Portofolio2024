@@ -7,18 +7,18 @@ import Lenis from "@studio-freight/lenis";
 import useDimension from "./useDimension";
 
 const images = [
-  "/images/Flowy.png",
-  "/images/HarvestTable.png",
-  "/images/KucingCariRumah.png",
-  "/images/Portofolio.png",
-  "/images/Seku.png",
-  "/images/TechSprint.png",
-  "/images/NusantaraTrip.png",
-  "/images/Hoobank.png",
-  "/images/NusantaraCode.png",
-  "/images/Flowy.png",
-  "/images/HarvestTable.png",
-  "/images/KucingCariRumah.png",
+  "./images/Flowy.png",
+  "./images/HarvestTable.png",
+  "./images/KucingCariRumah.png",
+  "./images/Portofolio.png",
+  "./images/Seku.png",
+  "./images/TechSprint.png",
+  "./images/NusantaraTrip.png",
+  "./images/Hoobank.png",
+  "./images/NusantaraCode.png",
+  "./images/Flowy.png",
+  "./images/HarvestTable.png",
+  "./images/KucingCariRumah.png",
 ];
 
 const ParalaxGallery = () => {
