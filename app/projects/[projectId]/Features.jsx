@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import styles from "./styles.module.scss";
-import prefix from "../../components/Prefix";
 
 const Features = ({ features, defaultImg }) => {
   const [openFeatureId, setOpenFeatureId] = useState(null);
