@@ -87,9 +87,9 @@ export default function Index({ modal, projects }) {
               >
                 <Image
                   src={modal}
-                  style={{ width: "auto", height: "auto" }}
+                  style={{ width: "100%", height: "100%" }}
                   width={300}
-                  height={0}
+                  height={300}
                   alt="image"
                   placeholder="blur"
                   blurDataURL={modal}

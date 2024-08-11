@@ -3,13 +3,10 @@ import styles from "./styles.module.scss";
 import Image from "next/image";
 import Button from "../components/Button";
 import { IoLogoJavascript } from "react-icons/io";
-import { MdHtml } from "react-icons/md";
-import { MdCss } from "react-icons/md";
-import { FaReact } from "react-icons/fa";
+import { MdHtml, MdCss } from "react-icons/md";
+import { FaReact, FaFigma, FaPhp } from "react-icons/fa";
 import { RiNextjsLine } from "react-icons/ri";
-import { FaPhp } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
-import { FaFigma } from "react-icons/fa";
 import { FiFramer } from "react-icons/fi";
 
 const AboutPage = () => {
@@ -20,7 +17,7 @@ const AboutPage = () => {
 
         <div className={styles.aboutMe}>
           <Image
-            src="/images/Alfaridza.jpg"
+            src="./images/Alfaridza.jpg"
             width={300}
             height={450}
             alt="Image"
