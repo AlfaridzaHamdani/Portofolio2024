@@ -1,6 +1,7 @@
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaFigma, FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
+const baseUrl = "https://alfaridzahamdani.github.io/Portofolio2024";
 
 export const ProjectsData = [
   {
@@ -9,8 +10,8 @@ export const ProjectsData = [
     desc: "E-commerce for Home Decor",
     cat: "Design & Development",
     position: "top",
-    img: "./images/Seku-Modal.png",
-    modal: "./images/Seku-Modal.png",
+    img: `${baseUrl}/images/Seku-Modal.png`,
+    modal: `${baseUrl}/images/Seku-Modal.png`,
     url: "https://alfaridzahamdani.github.io/Seku/",
     github: "https://github.com/AlfaridzaHamdani/Seku",
     studycase:
@@ -21,19 +22,19 @@ export const ProjectsData = [
         id: 1,
         title: "Integrated products data",
         desc: "User can see the product details and go to the product page",
-        img: "./images/seku-feature-1.png",
+        img: `${baseUrl}/images/seku-feature-1.png`,
       },
       {
         id: 2,
         title: "InsZone",
         desc: "Inspiration page, user can see the reference of the setups",
-        img: "https://alfaridzahamdani.github.io/Portofolio2024/images/seku-feature-2.png",
+        img: `${baseUrl}/images/seku-feature-2.png`,
       },
       {
         id: 3,
         title: "Products Page",
         desc: "User can see all products and go to the product page",
-        img: "/images/seku-feature-3.png",
+        img: `${baseUrl}/images/seku-feature-3.png`,
       },
     ],
   },
@@ -42,8 +43,8 @@ export const ProjectsData = [
     title: "HooBank",
     desc: "Company Profile",
     cat: "Development",
-    img: "/images/Hoobank-Cover.png",
-    modal: "/images/Hoobank-Modal.png",
+    img: `${baseUrl}/images/Hoobank-Cover.png`,
+    modal: `${baseUrl}/images/Hoobank-Modal.png`,
     url: "https://alfaridzahamdani.github.io/project-HooBank/",
     github: "https://github.com/AlfaridzaHamdani/project-HooBank",
     studycase:
@@ -54,19 +55,19 @@ export const ProjectsData = [
         id: 1,
         title: "Feature",
         desc: "",
-        img: "/images/hoobank-feature-1.png",
+        img: `${baseUrl}/images/hoobank-feature-1.png`,
       },
       {
         id: 2,
         title: "Product",
         desc: "",
-        img: "/images/hoobank-feature-2.png",
+        img: `${baseUrl}/images/hoobank-feature-2.png`,
       },
       {
         id: 3,
         title: "Client",
         desc: "",
-        img: "/images/hoobank-feature-3.png",
+        img: `${baseUrl}/images/hoobank-feature-3.png`,
       },
     ],
   },
@@ -77,8 +78,8 @@ export const ProjectsData = [
     cat: "Design",
     type: "design",
     date: "2024",
-    img: "/images/NusantaraTrip-Cover.png",
-    modal: "/images/NusantaraTrip-Modal.png",
+    img: `${baseUrl}/images/NusantaraTrip-Cover.png`,
+    modal: `${baseUrl}/images/NusantaraTrip-Modal.png`,
     file: "/files/tripToBromoDesign.pdf",
     url: "/files/tripToBromoDesign.pdf",
     studycase:
@@ -93,8 +94,8 @@ export const ProjectsData = [
     cat: "Design",
     type: "design",
     date: "2024",
-    img: "/images/NusantaraCode-Cover.png",
-    modal: "/images/NusantaraCode-Modal.png",
+    img: `${baseUrl}/images/NusantaraCode-Cover.png`,
+    modal: `${baseUrl}/images/NusantaraCode-Modal.png`,
     url: "/files/nusantaraCodeDesign.pdf",
     studycase:
       "Nusantara Code is your go-to platform for web development courses, designed to turn you into a skilled web developer. Our website offers an array of interactive features, including CodePlay, an online code editor for hands-on practice, competency tests to gauge your progress, and quizzes for each lesson to reinforce your learning. Dive into a comprehensive learning experience and master the art of web development with us!",
@@ -107,8 +108,8 @@ export const ProjectsData = [
     desc: "Company Profile ",
     cat: "Development",
     date: "2024",
-    img: "/images/flowy-cover.png",
-    modal: "/images/Flowy-Modal.png",
+    img: `${baseUrl}/images/flowy-cover.png`,
+    modal: `${baseUrl}/images/Flowy-Modal.png`,
     url: "https://alfaridzahamdani.github.io/Flowy/",
     github: "https://github.com/AlfaridzaHamdani/Flowy",
     studycase:
@@ -122,8 +123,8 @@ export const ProjectsData = [
     desc: "Company Profile",
     cat: "Development",
     date: "2024",
-    img: "/images/HarvestTable-cover.png",
-    modal: "/images/HarvestTable-Modal.png",
+    img: `${baseUrl}/images/HarvestTable-cover.png`,
+    modal: `${baseUrl}/images/HarvestTable-Modal.png`,
     url: "https://alfaridzahamdani.github.io/HarvestTable/",
     github: "https://github.com/AlfaridzaHamdani/HarvestTable",
     studycase:

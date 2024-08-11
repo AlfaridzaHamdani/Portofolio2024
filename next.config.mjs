@@ -12,7 +12,5 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  assetPrefix: "https://alfaridzahamdani.github.io/Portofolio2024",
 };
-
 export default nextConfig;
