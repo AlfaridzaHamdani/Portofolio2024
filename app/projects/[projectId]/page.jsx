@@ -9,13 +9,11 @@ export async function generateStaticParams() {
     projectId: project.id.toString(),
   }));
 
-  return projectIds.map(({ projectId }) => ({
-    params: { projectId },
-  }));
+  return projectIds;
 }
 
 export default function Page({ params }) {
-  const projectId = params.projectId;
+  const { projectId } = params;
   const data =
     ProjectsData.find((item) => item.id.toString() === projectId) || {};
   const features = data.features || [];
