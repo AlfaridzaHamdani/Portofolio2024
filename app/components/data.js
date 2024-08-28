@@ -1,7 +1,7 @@
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaFigma, FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-const baseUrl = "https://alfaridzahamdani.github.io/Portofolio2024";
+const baseUrl = "http://alfaridza.site/";
 
 export const ProjectsData = [
   {
