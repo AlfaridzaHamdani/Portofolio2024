@@ -12,8 +12,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  assetPrefix: "",
-  basePath: "",
 };
 
 export default nextConfig;
