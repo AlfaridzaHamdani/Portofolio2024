@@ -65,168 +65,170 @@ $page-padding: 0 100px;
   }
 }
 
-.studyCase {
-  font-family: $jost;
-  padding: 60px;
-  height: calc(100vh - 100px);
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-
-  .container {
+@media all and (min-width: 1280px) {
+  .studyCase {
+    font-family: $jost;
+    padding: 60px;
+    height: calc(100vh - 100px);
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 200px;
-    width: 100%;
+    flex-wrap: wrap;
 
-    .paragraph {
-      flex-basis: 80%;
+    .container {
       display: flex;
-      height: 100%;
-
-      p {
-        margin: 0;
-        width: 100%;
-        font-size: 24px;
-        font-weight: 400;
-      }
-    }
-
-    .title {
-      display: flex;
-      height: 100%;
-      flex-wrap: wrap;
       justify-content: space-between;
-
-      .containerTop {
-        display: flex;
-        flex-direction: column;
-
-        div:nth-child(1) {
-          display: flex;
-          align-items: center;
-        }
-      }
+      align-items: center;
+      height: 200px;
+      width: 100%;
 
       .paragraph {
-        flex-basis: 70%;
-      }
+        flex-basis: 80%;
+        display: flex;
+        height: 100%;
 
-      p {
-        svg {
-          margin-right: 10px;
+        p {
+          margin: 0;
+          width: 100%;
+          font-size: 24px;
+          font-weight: 400;
         }
       }
 
-      .bullet {
-        background-color: $black;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        margin-right: 15px;
+      .title {
+        display: flex;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .containerTop {
+          display: flex;
+          flex-direction: column;
+
+          div:nth-child(1) {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .paragraph {
+          flex-basis: 70%;
+        }
+
+        p {
+          svg {
+            margin-right: 10px;
+          }
+        }
+
+        .bullet {
+          background-color: $black;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          margin-right: 15px;
+        }
+
+        h1 {
+          margin: 0;
+          font-size: 32px;
+          font-weight: 300;
+          color: $black;
+        }
       }
-
-      h1 {
-        margin: 0;
-        font-size: 32px;
-        font-weight: 300;
-        color: $black;
-      }
     }
   }
-}
 
-.features {
-  background-color: #f0f0f0;
-  height: fit-content;
-  margin: 60px;
-  padding: 80px;
-  border-radius: 8px;
-  display: flex;
-
-  .container {
+  .features {
+    background-color: #f0f0f0;
+    height: fit-content;
+    margin: 60px;
+    padding: 80px;
+    border-radius: 8px;
     display: flex;
-    flex-direction: column;
-  }
-}
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-  width: 300px;
-
-  hr {
-    width: 100%;
-    margin: 20px 0;
-  }
-
-  h1 {
-    margin: 0 15px 0 0;
-    text-align: start;
-  }
-
-  .dropdownButton {
-    padding: 0;
-    color: $black;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-
-    .arrowDown,
-    .arrowUp {
-      border: solid $black;
-      border-width: 0 3px 3px 0;
-      display: inline-block;
-      padding: 5px;
-      transition: transform 0.3s ease;
-    }
-
-    .arrowDown {
-      transform: rotate(45deg);
-    }
-
-    .arrowUp {
-      transform: rotate(-135deg);
+    .container {
+      display: flex;
+      flex-direction: column;
     }
   }
 
-  .dropdownMenu {
-    display: block;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    margin-top: 10px;
-    border-radius: 5px;
-    overflow: hidden;
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 300px;
 
-    .dropdownItem {
-      padding: 12px 16px;
+    hr {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    h1 {
+      margin: 0 15px 0 0;
+      text-align: start;
+    }
+
+    .dropdownButton {
+      padding: 0;
+      color: $black;
+      border: none;
       cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
 
-      &:hover {
-        background-color: #f1f1f1;
+      .arrowDown,
+      .arrowUp {
+        border: solid $black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      .arrowDown {
+        transform: rotate(45deg);
+      }
+
+      .arrowUp {
+        transform: rotate(-135deg);
+      }
+    }
+
+    .dropdownMenu {
+      display: block;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin-top: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .dropdownItem {
+        padding: 12px 16px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f1f1f1;
+        }
       }
     }
   }
-}
 
-.featureImg {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 4rem;
-
-  img {
+  .featureImg {
     width: 100%;
     height: auto;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4rem;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
@@ -393,6 +395,288 @@ $page-padding: 0 100px;
     img {
       width: 100%;
       height: auto;
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .studyCase {
+    font-family: $jost;
+    padding: 1rem;
+
+    .container {
+      .title {
+        display: flex;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .containerTop {
+          display: flex;
+          flex-direction: column;
+
+          div:nth-child(1) {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .paragraph {
+          text-align: justify;
+        }
+
+        p {
+          svg {
+            margin-right: 10px;
+          }
+        }
+
+        .bullet {
+          background-color: $black;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          margin-right: 15px;
+        }
+
+        h1 {
+          margin: 0;
+          font-size: 32px;
+          font-weight: 300;
+          color: $black;
+        }
+      }
+    }
+  }
+
+  .features {
+    background-color: #f0f0f0;
+    height: fit-content;
+    margin: 3rem auto;
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .featureImg {
+      padding: 24px;
+      width: 80%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    hr {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    h1 {
+      margin: 0 15px 0 0;
+      text-align: start;
+    }
+
+    .dropdownButton {
+      padding: 0;
+      color: $black;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+
+      .arrowDown,
+      .arrowUp {
+        border: solid $black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      .arrowDown {
+        transform: rotate(45deg);
+      }
+
+      .arrowUp {
+        transform: rotate(-135deg);
+      }
+    }
+
+    .dropdownMenu {
+      display: block;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin-top: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .dropdownItem {
+        padding: 12px 16px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .studyCase {
+    font-family: $jost;
+    padding: 1rem;
+
+    .container {
+      .title {
+        display: flex;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .containerTop {
+          display: flex;
+          flex-direction: column;
+
+          div:nth-child(1) {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .paragraph {
+          text-align: justify;
+        }
+
+        p {
+          svg {
+            margin-right: 10px;
+          }
+        }
+
+        .bullet {
+          background-color: $black;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          margin-right: 15px;
+        }
+
+        h1 {
+          margin: 0;
+          font-size: 32px;
+          font-weight: 300;
+          color: $black;
+        }
+      }
+    }
+  }
+
+  .features {
+    background-color: #f0f0f0;
+    height: fit-content;
+    margin: 3rem auto;
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .featureImg {
+      padding: 24px;
+      width: 80%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    hr {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    h1 {
+      margin: 0 15px 0 0;
+      text-align: start;
+    }
+
+    .dropdownButton {
+      padding: 0;
+      color: $black;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+
+      .arrowDown,
+      .arrowUp {
+        border: solid $black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      .arrowDown {
+        transform: rotate(45deg);
+      }
+
+      .arrowUp {
+        transform: rotate(-135deg);
+      }
+    }
+
+    .dropdownMenu {
+      display: block;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      margin-top: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .dropdownItem {
+        padding: 12px 16px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
     }
   }
 }
