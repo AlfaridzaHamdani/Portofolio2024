@@ -1,11 +1,26 @@
 import { RiTailwindCssFill } from "react-icons/ri";
-import { FaFigma, FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
+import { FaFigma, FaHtml5, FaCss3Alt, FaReact, FaSass } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-const baseUrl = "https://alfaridzahamdani.github.io/Portofolio2024";
+const baseUrl = "";
 
 export const ProjectsData = [
   {
     id: 1,
+    title: "MindEase",
+    desc: "Pychology Website",
+    cat: "Development",
+    date: "2024",
+    img: `${baseUrl}/images/MindEase-Modal.png`,
+    modal: `${baseUrl}/images/MindEase-Modal.png`,
+    url: "https://mind-ease-five.vercel.app/",
+    github: "https://github.com/AlfaridzaHamdani/MindEase",
+    studycase:
+      "MindEase is a psychology website that offers a range of mental health services. I designed and developed this website to provide a platform for users to access mental health resources and services. The website features a clean and intuitive design, making it easy for users to navigate and find the information they need.",
+    tech: [<FaReact />, <FaSass />],
+    features: [],
+  },
+  {
+    id: 2,
     title: "Seku",
     desc: "E-commerce for Home Decor",
     cat: "Design & Development",
@@ -35,39 +50,6 @@ export const ProjectsData = [
         title: "Products Page",
         desc: "User can see all products and go to the product page",
         img: `${baseUrl}/images/seku-feature-3.png`,
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "HooBank",
-    desc: "Company Profile",
-    cat: "Development",
-    img: `${baseUrl}/images/Hoobank-Cover.png`,
-    modal: `${baseUrl}/images/Hoobank-Modal.png`,
-    url: "https://alfaridzahamdani.github.io/project-HooBank/",
-    github: "https://github.com/AlfaridzaHamdani/project-HooBank",
-    studycase:
-      "I've been diving into modern design concepts through a fantastic project guide by the incredible YouTube channel 'JavaScript Mastery'. Their tutorials are incredibly insightful and have greatly enhanced my understanding of modern design principles. If you're passionate about leveling up your skills, I highly recommend checking out their channel!",
-    tech: [<FaReact />, <RiTailwindCssFill />],
-    features: [
-      {
-        id: 1,
-        title: "Feature",
-        desc: "",
-        img: `${baseUrl}/images/hoobank-feature-1.png`,
-      },
-      {
-        id: 2,
-        title: "Product",
-        desc: "",
-        img: `${baseUrl}/images/hoobank-feature-2.png`,
-      },
-      {
-        id: 3,
-        title: "Client",
-        desc: "",
-        img: `${baseUrl}/images/hoobank-feature-3.png`,
       },
     ],
   },
@@ -131,5 +113,38 @@ export const ProjectsData = [
       "HarvestTable is a company profile for a restourant. I came across this website design on Dribbble and decided to implement it to hone my slicing skills. The project is a great opportunity to practice and perfect the art of turning design concepts into functional digital products.",
     tech: [<FaHtml5 />, <FaCss3Alt />, <IoLogoJavascript />],
     features: [],
+  },
+  {
+    id: 7,
+    title: "HooBank",
+    desc: "Company Profile",
+    cat: "Development",
+    img: `${baseUrl}/images/Hoobank-Cover.png`,
+    modal: `${baseUrl}/images/Hoobank-Modal.png`,
+    url: "https://alfaridzahamdani.github.io/project-HooBank/",
+    github: "https://github.com/AlfaridzaHamdani/project-HooBank",
+    studycase:
+      "I've been diving into modern design concepts through a fantastic project guide by the incredible YouTube channel 'JavaScript Mastery'. Their tutorials are incredibly insightful and have greatly enhanced my understanding of modern design principles. If you're passionate about leveling up your skills, I highly recommend checking out their channel!",
+    tech: [<FaReact />, <RiTailwindCssFill />],
+    features: [
+      {
+        id: 1,
+        title: "Feature",
+        desc: "",
+        img: `${baseUrl}/images/hoobank-feature-1.png`,
+      },
+      {
+        id: 2,
+        title: "Product",
+        desc: "",
+        img: `${baseUrl}/images/hoobank-feature-2.png`,
+      },
+      {
+        id: 3,
+        title: "Client",
+        desc: "",
+        img: `${baseUrl}/images/hoobank-feature-3.png`,
+      },
+    ],
   },
 ];

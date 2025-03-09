@@ -17,7 +17,7 @@ const AboutPage = () => {
 
         <div className={styles.aboutMe}>
           <Image
-            src="./images/Alfaridza.jpg"
+            src="/images/Alfaridza.jpg"
             width={300}
             height={450}
             alt="Image"
