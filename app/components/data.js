@@ -1,7 +1,7 @@
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaFigma, FaHtml5, FaCss3Alt, FaReact, FaSass } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-const baseUrl = "";
+const baseUrl = ".";
 
 export const ProjectsData = [
   {
